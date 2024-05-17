@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hannah Azad</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <!-- <img src="images/logo.png" alt="logo"> -->
+                    H.A.M.
+                </a>
+            </div>
+
+            <div class="main-menu">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about">About Me</a>
+                    </li>
+                    <li>
+                        <a href="#projects">Projects</a>
+                    </li>
+                    <li>
+                        <a class="btn" href="mailto:hannahazad@gmail.com"> Contact </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Hamburger Button -->
+            <button class="hamburger-button">
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+            </button>
+            <div class="mobile-menu">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about">About Me</a>
+                    </li>
+                    <li>
+                        <a href="#projects">Projects</a>
+                    </li>
+                    <li>
+                        <a class="btn" href="mailto:hannahazad@gmail.com"> Contact </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Scroll Animation -->
+        <script>
+            function smoothScroll(target, duration) {
+                var target = document.querySelector(target);
+                var targetPosition = target.getBoundingClientRect().top;
+                var startPosition = window.pageYOffset;
+                var distance = targetPosition - startPosition;
+                var startTime = null;
+    
+                function animation(currentTime) {
+                    if (startTime === null) startTime = currentTime;
+                    var timeElapsed = currentTime - startTime;
+                    var run = easing(timeElapsed, startPosition, distance, duration);
+                    window.scrollTo(0, run);
+                    if (timeElapsed < duration) requestAnimationFrame(animation);
+                }
+    
+                function easing(t, b, c, d) {
+                    t /= d / 2;
+                    if (t < 1) return c / 2 *t * t + b;
+                    t--;
+                    return -c / 2 * (t * (t - 2) - 1) + b;
+                }
+    
+                requestAnimationFrame(animation);
+            }
+    
+            var about = document.querySelector('#about');
+            var projects = document.querySelector('#projects');
+
+            var aboutLink = document.querySelector('nav a[href="#about"]');
+            var projectsLink = document.querySelector('nav a[href="#projects"]');
+    
+            aboutLink.addEventListener('click', function() {
+                smoothScroll('#about', 1000);
+            });
+    
+            projectsLink.addEventListener('click', function() {
+                smoothScroll('#projects', 1000);
+            });
+
+        </script>
+
+    </nav>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-heading text-xxl">
+                    Hannah Azad Manjiri
+                </h1>
+                <p class="hero-text text-md">
+                    3rd Year Business + Computer Science Student at UBC
+                </p>
+                <div class="hero-buttons">
+                    <a href="https://www.linkedin.com/in/hannah-azad-manjiri-40b6a51b9/" class="btn btn-primary">LinkedIn</a>
+                    <a href="https://github.com/HannahAzad" class="btn">Github</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Me Section -->
+    <div id="about">
+    <section class="about bg-primary">
+        <div class="container-xs">
+            <h2 class="about-heading text-xl text-center">
+                Hello!
+            </h2>
+            <div class="about-content text-sm text-center">
+                I'm a third-year student pursuing a double major in business & computer science at the University of British Columbia. I have strong interests in product design, data analysis, and business development, and am constantly searching for opportunities to grow my skills in these areas! If you want to know more about what I've been up to, feel free to take a look at my projects below or contact me for my resume.
+            </div>
+        </div>
+    </section>
+</div>
+    <!-- Projects -->
+    <div id='projects'>
+    <section class="projects">
+        <div class="container">
+            <h3 class="about-heading text-xl text-center">
+                My Projects
+            </h3>
+            <div class="projects-subheading text-md text-center">
+                A blend of dev work, graphic design, and more...
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="card container-sm">
+                    <div class="project-card-img">
+                        <img src="images/p3.jpeg" alt="p1">
+                    </div>
+                    <div class="project-card-header">
+                        <h4 class="project-heading text-lg">
+                            This Website!
+                        </h4>
+                        <p class="projects-card-subheading">
+                            My portfolio website built using HTML, CSS, and JavaScript. Improvements are being made throughout the summer!
+                        </p>
+                    </div>
+                    <div class="project-card-body">
+                        <a href="#" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <!-- <div class="card container-sm">
+                    <div class="projects-card-img">
+                        <img src="images/p3.jpeg" alt="p1">
+                    </div>
+                    <div class="project-card-header">
+                        <h4 class="project-heading text-lg">
+                            DigiHealth
+                        </h4>
+                        <p class="projects-card-subheading">
+                            DigiHealth is a digital health journal created to help university students monitor their mental and physical well-being. This project was built in Java, with the GUI created using Swing.
+                        </p>
+                    </div>
+                    <div class="project-card-body">
+                        <a href="#" class="btn btn-primary">View Project</a>
+                    </div>
+                </div> -->
+                <!-- Project 3 -->
+                <div class="card container-sm">
+                    <div class="projects-card-img">
+                        <img src="images/blueprint.jpg" alt="p1">
+                    </div>
+                    <div class="project-card-header">
+                        <h4 class="project-heading text-lg">
+                            Blueprint 2024
+                        </h4>
+                        <p class="projects-card-subheading">
+                            I connected over 200 students and 60 professionals in the tech industry by directing UBC's largest technology conference, Blueprint. With Google as its headline sponsor, the conference featured 1 panel discussion, 4 workshops, 12 boothing partners, & various live demos of different emerging technologies.
+                        </p>
+                    </div>
+                    <div class="project-card-body">
+                        <a href="https://www.ubcbiztech.com/blueprint-2024" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+                <!-- Project 4 -->
+                <div class="card container-sm">
+                    <div class="projects-card-img">
+                        <img src="images/p3.jpeg" alt="p1">
+                    </div>
+                    <div class="project-card-header">
+                        <h4 class="project-heading text-lg">
+                            Hey Stranger Vancouver
+                        </h4>
+                        <p class="projects-card-subheading">
+                            My best friend and I co-founded a photo blog highlighting the diverse stories of 50+ people across Vancouver. This project was created to promote empathy & encourage people to learn about experiences that they would otherwise be removed from.
+                        </p>
+                    </div>
+                    <div class="project-card-body">
+                        <a href="https://www.heystrangervancouver.com/" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+                <!-- Project 5 -->
+                <div class="card container-sm">
+                    <div class="project-card-img">
+                        <!-- <img src="images/comingsoon.png" alt="p1"> -->
+                    </div>
+                    <div class="project-card-header">
+                        <h4 class="project-heading text-lg">
+                            Graphic Design
+                        </h4>
+                        <p class="projects-card-subheading">
+                            Take a look at my Behance account, which showcases designs I've made using Adobe InDesign, Adobe Illustrator, and Figma.
+                        </p>
+                    </div>
+                    <div class="project-card-body">
+                        <a href="#" class="btn btn-primary">Coming Soon</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="socialIcons">
+            <a href="https://www.linkedin.com/in/hannah-azad-manjiri-40b6a51b9/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/HannahAzad"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:hannahazad@gmail.com"><i class="fa fa-envelope"></i></a>
+        </div>
+        <div class="footerNav">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About Me</a></li>
+                <li><a href="">Projects</a></li>
+            </ul>
+        </div>
+        <div class="footerBottom">
+            <p>
+                Copyright &copy;2024; Designed by <span class="designer">Hannah A.M.</span>
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
