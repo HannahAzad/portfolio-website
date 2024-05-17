@@ -112,11 +112,6 @@ img {
     padding: 30px 0;
 }
 
-.projects .projects-heading {
-    width: 700px;
-    margin-bottom: 30px;
-}
-
 .projects .projects-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -124,24 +119,27 @@ img {
     margin-top: 30px;
 }
 
-.projects .project-card-img {
-    margin-bottom: 30px;
-    text-align: center;
+.projects .projects-in-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
 }
 
-.projects .project-card-header {
-    margin-bottom: 15px;
-    text-align: center;
+.projects .project-card-img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.projects .project-card-heading {
+    margin-bottom: 20px;
 }
 
 .projects .project-card-subheading {
-    margin-bottom: 30px;
-    text-align: center;
+    margin-bottom: 20px;
 }
 
 .projects .project-card-body {
-    margin-bottom: 15px;
-    text-align: center;
+    margin-bottom: 20px;
 }
 
 /* Footer */
