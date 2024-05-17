@@ -138,10 +138,6 @@ img {
     margin-bottom: 20px;
 }
 
-.projects .project-card-body {
-    margin-bottom: 20px;
-}
-
 /* Footer */
 .footer {
     background-color: var(--dark-color);
@@ -381,9 +377,14 @@ img {
 
 
 /* Media Queries */
-@media (max-width: 960px) {
+@media (max-width: 850px) {
     .text.xxl {
         font-size: 2.5rem;
+    }
+
+    .projects .projects-in-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0;
     }
 }
 
