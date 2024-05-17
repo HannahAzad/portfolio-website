@@ -107,8 +107,16 @@ img {
 .projects .projects-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 30px;
+    gap: 35px;
     margin-top: 30px;
+}
+
+.projects .card {
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2);
+    border-style: solid;
+    border-width: 0.5px 0.5px 0.5px 0.5px;
+    border-color: var(--primary-color);
+    border-radius: 1.2rem;
 }
 
 .projects .projects-in-grid {
@@ -139,7 +147,7 @@ img {
 /* Footer */
 .footer {
     background-color: var(--dark-color);
-    padding: 25px 0;
+    padding: 35px 0;
 }
 
 .footer .footerContainer {
@@ -224,8 +232,8 @@ img {
 
 /* Card */
 .card {
-    background: var(--light-color);
-    color: #000;
+    /* background: var(--light-color); */
+    background: white;
     border-radius: 10px;
     padding: 30px 30px;
 }
@@ -243,6 +251,7 @@ img {
     cursor: pointer;
     transition: 0.5s;
     text-align: center;
+    box-shadow: 10px, 10px, 5px, 12px, var(--dark-color);
 }
 
 .btn:hover {
