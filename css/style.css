@@ -126,7 +126,7 @@ img {
 
 .projects .projects-in-grid {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
 }
 
@@ -137,19 +137,16 @@ img {
 
 .projects .project-card-heading {
     margin-bottom: 20px;
-   text-align: center;
 }
 
 .projects .project-card-subheading {
     margin-bottom: 20px;
-   text-align: center;
 }
 
 .projects .project-card-skills {
     margin-bottom: 20px;
     font-weight: 600;
     color: var(--pink-color);
-   text-align: center;
 }
 
 /* Footer */
