@@ -118,14 +118,15 @@ img {
 .projects .card {
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2);
     border-style: solid;
-    border-width: 0.5px 0.5px 0.5px 0.5px;
+    border-width: 0.3px 0.3px 0.3px 0.3px;
     border-color: var(--blue-color);
     border-radius: 1.2rem;
+   
 }
 
 .projects .projects-in-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 30px;
 }
 
@@ -136,16 +137,19 @@ img {
 
 .projects .project-card-heading {
     margin-bottom: 20px;
+   text-align: center;
 }
 
 .projects .project-card-subheading {
     margin-bottom: 20px;
+   text-align: center;
 }
 
 .projects .project-card-skills {
     margin-bottom: 20px;
     font-weight: 600;
     color: var(--pink-color);
+   text-align: center;
 }
 
 /* Footer */
