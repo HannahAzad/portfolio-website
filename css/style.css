@@ -70,6 +70,8 @@ img {
 .navbar .logo {
 /*     max-width: 70px; */
    font-weight: 600;
+   color: var(--blue-color);
+   font-size: 1.5rem;
 }
 
 /* Hero */
