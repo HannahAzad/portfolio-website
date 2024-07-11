@@ -256,7 +256,8 @@ img {
 }
 
 .btn:hover {
-   color: var(--pink-color);
+   background: var(--blue-color);
+   color: var(--light-color);
 }
 
 .btn-primary {
@@ -267,6 +268,11 @@ img {
 .btn-dark {
     background: var(--dark-color);
     color: #fff;
+}
+
+.btn-dark:hover {
+   background: var(--light-color);
+   color: var(--blue-color);
 }
 
 .btn-block {
